@@ -13,7 +13,7 @@ jobs:
   # O nome do nosso job é "test-and-build"
   test-and-build:
     # A máquina virtual que o job usará
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     permissions:
       contents: read # Permissão para fazer checkout do código
