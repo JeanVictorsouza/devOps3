@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  app:
+  # IMPORTANTE: Substitua 'SEU-USUARIO/SEU-REPO'
+  # Esta é a imagem que o nosso CI publica no GHCR
+  image: ghcr.io/JeanVictorsouza/devOps3:latest
+  ports:
+    - "3000: 3000" # Mapeia a porta do conteiner para localhost:3000
+
+  # Esta linha diz ao Docker para sempre reiniciar o contêiner
+  # (inclusive quando você liga o PC, se o Docker Desktop iniciar)
+  restart: always
+
+  # Garante que o Docker sempre baixe a imagem mais nova
+  pull_policy: always
